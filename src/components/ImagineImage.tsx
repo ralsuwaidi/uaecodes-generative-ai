@@ -63,6 +63,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
           <div className="mt-4 mb-2">
             {buttonList.map((button) => (
               <a
+                key={button.text}
                 href={button.link}
                 className="mx-2 py-2 px-4 border rounded hover:bg-gray-600"
               >
