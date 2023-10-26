@@ -38,8 +38,8 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
   }, [showText, typingTime]);
 
   return (
-    <>
-      <div className="bg-gray-800 text-white w-full py-4 px-4 absolute bottom-0">
+    <div className="relative">
+      <div className="bg-gray-800 text-white w-full py-4 px-4 absolute inset-x-0 bottom-0 ">
         {showText && (
           <p>
             <TypeAnimation
@@ -75,6 +75,6 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
           src={images[styleNumber - 1].src}
         />
       </div>
-    </>
+    </div>
   );
 }
