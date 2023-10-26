@@ -7,9 +7,9 @@ interface SlashImagineProps {
 export default function SlashImagine({ setStyleNumber }: SlashImagineProps) {
   const styles = [
     { style: "Choose style", number: 0 },
-    { style: "Crayon Painting", number: 1 },
-    { style: "Watercolor Art", number: 2 },
-    { style: "Sci-Fi Art", number: 3 },
+    { style: "Sci-Fi Art", number: 1 },
+    { style: "Crayon Painting", number: 2 },
+    { style: "Watercolor Art", number: 3 },
   ];
 
   const handleStyleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -28,18 +28,20 @@ export default function SlashImagine({ setStyleNumber }: SlashImagineProps) {
   return (
     <div className="bg-gray-800 w-screen py-8">
       <div className="flex items-center justify-center align-baseline text-gray-200 space-x-4 mx-4">
-        <div className="bg-gray-700 px-2 rounded py-2 font-bold ">
-          <TypeAnimation
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "/imagine",
-              1000,
-            ]}
-            wrapper="span"
-            className="w-36"
-            speed={5}
-          />
+        <div className="w-32">
+          <div className="bg-gray-700 px-2 rounded py-2 font-bold ">
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "/imagine",
+                1000,
+              ]}
+              wrapper="span"
+              speed={5}
+            />
+          </div>
         </div>
+
         <span>
           UAE in Drawing, 8K, HD, Super-Resolution, in the style of
           <select

@@ -12,9 +12,13 @@ interface ImagineImageProps {
 }
 
 const buttonList = [
-  { text: "UAE Codes", link: "https://uaecodes.ai" },
-  { text: "Learn AI", link: "https://learnai.ae" },
-  { text: "Generative Guide", link: "https://generative.guide" },
+  { text: "UAE Codes", link: "https://ai.gov.ae/uaecodes/" },
+  { text: "Learn", link: "http://octopus-app-czg7j.ondigitalocean.app" },
+  {
+    text: "AI Guide",
+    link:
+      "https://ai.gov.ae/wp-content/uploads/2023/04/406.-Generative-AI-Guide_ver1-EN.pdf",
+  },
 ];
 
 export default function ImagineImage({ styleNumber }: ImagineImageProps) {
