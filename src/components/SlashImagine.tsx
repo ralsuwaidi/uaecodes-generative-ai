@@ -28,7 +28,7 @@ export default function SlashImagine({ setStyleNumber }: SlashImagineProps) {
   return (
     <div className="bg-gray-800 w-screen py-8">
       <div className="flex items-center justify-center align-baseline text-gray-200 space-x-4 mx-4">
-        <div className="bg-gray-700 px-2 rounded py-2 font-bold">
+        <div className="bg-gray-700 px-2 rounded py-2 font-bold w-36 ">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
