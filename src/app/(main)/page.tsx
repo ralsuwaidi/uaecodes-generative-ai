@@ -1,3 +1,4 @@
+import AIProcessingList from "@/components/AIProcessingList";
 import { CallToAction } from "@/components/CallToAction";
 import { Faqs } from "@/components/Faqs";
 import { Hero } from "@/components/Hero";
@@ -22,13 +23,8 @@ import { SecondaryFeatures } from "@/components/SecondaryFeatures";
 
 export default function Home() {
   return (
-    <>
-      <PrimaryFeatures />
-      <SecondaryFeatures />
-      <CallToAction />
-      <Reviews />
-      <Pricing />
-      <Faqs />
-    </>
+    <div className="flex items-center justify-center min-h-screen">
+      <AIProcessingList />
+    </div>
   );
 }
