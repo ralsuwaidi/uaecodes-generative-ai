@@ -14,7 +14,7 @@ interface ImagineImageProps {
 const buttonList = [
   { text: "UAE Codes", link: "https://uaecodes.ai" },
   { text: "Learn AI", link: "https://learnai.ae" },
-  { text: "AI Guide", link: "https://generative.guide" },
+  { text: "Generative Guide", link: "https://generative.guide" },
 ];
 
 export default function ImagineImage({ styleNumber }: ImagineImageProps) {
@@ -38,7 +38,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
   }, [showText, typingTime]);
 
   return (
-    <div className="w-screen h-screen bg-gray-900 flex flex-wrap   ">
+    <div className="w-screen h-screen bg-gray-900 flex flex-wrap items-center justify-center ">
       <style>{`@keyframes removeBlur {
           0% { filter: blur(100px); }
           100% { filter: blur(0px); }
@@ -65,7 +65,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
               <a
                 key={button.text}
                 href={button.link}
-                className=" py-1 px-2 border rounded hover:bg-gray-600"
+                className=" py-2 px-4 border rounded hover:bg-gray-600"
               >
                 {button.text}
               </a>
