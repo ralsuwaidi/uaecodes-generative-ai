@@ -38,17 +38,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
   }, [showText, typingTime]);
 
   return (
-    <div className="w-screen h-screen bg-gray-900 flex flex-wrap items-center justify-center ">
-      <style>{`@keyframes removeBlur {
-          0% { filter: blur(100px); }
-          100% { filter: blur(0px); }
-        }`}</style>
-      <img
-        className="rounded-lg max-w-screen max-h-screen object-cover animation-removeBlur px-5"
-        style={{ animationName: "removeBlur", animationDuration: "4s" }}
-        src={images[styleNumber - 1].src}
-      />
-
+    <>
       <div className="bg-gray-800 text-white w-full py-4 px-4 absolute bottom-0">
         {showText && (
           <p>
@@ -65,7 +55,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
               <a
                 key={button.text}
                 href={button.link}
-                className=" py-2 px-4 border rounded hover:bg-gray-600"
+                className=" py-1 px-2 border rounded hover:bg-gray-600"
               >
                 {button.text}
               </a>
@@ -73,6 +63,18 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
           </div>
         )}
       </div>
-    </div>
+
+      <div className="w-screen h-screen bg-gray-900 flex flex-wrap items-center justify-center ">
+        <style>{`@keyframes removeBlur {
+          0% { filter: blur(100px); }
+          100% { filter: blur(0px); }
+        }`}</style>
+        <img
+          className="rounded-lg max-w-screen max-h-screen object-cover animation-removeBlur px-5"
+          style={{ animationName: "removeBlur", animationDuration: "4s" }}
+          src={images[styleNumber - 1].src}
+        />
+      </div>
+    </>
   );
 }
