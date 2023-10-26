@@ -14,7 +14,7 @@ interface ImagineImageProps {
 const buttonList = [
   { text: "UAE Codes", link: "https://uaecodes.ai" },
   { text: "Learn AI", link: "https://learnai.ae" },
-  { text: "Generative Guide", link: "https://generative.guide" },
+  { text: "AI Guide", link: "https://generative.guide" },
 ];
 
 export default function ImagineImage({ styleNumber }: ImagineImageProps) {
@@ -38,7 +38,7 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
   }, [showText, typingTime]);
 
   return (
-    <div className="w-screen h-screen bg-gray-900 flex flex-wrap items-center justify-center ">
+    <div className="w-screen h-screen bg-gray-900 flex flex-wrap   ">
       <style>{`@keyframes removeBlur {
           0% { filter: blur(100px); }
           100% { filter: blur(0px); }
@@ -60,12 +60,12 @@ export default function ImagineImage({ styleNumber }: ImagineImageProps) {
           </p>
         )}
         {showButtons && (
-          <div className="mt-4 mb-2">
+          <div className="mt-4 mb-2 flex flex-wrap gap-2">
             {buttonList.map((button) => (
               <a
                 key={button.text}
                 href={button.link}
-                className="mx-2 py-2 px-4 border rounded hover:bg-gray-600"
+                className=" py-1 px-2 border rounded hover:bg-gray-600"
               >
                 {button.text}
               </a>
